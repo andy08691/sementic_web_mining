@@ -1,0 +1,56 @@
+#intro .jumbotron {
+  height: 90vh;
+}
+
+#search .jumbotron {
+  height: 30vh;
+}
+
+#intro h1 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.btn {
+  background: #f05f5c;
+  color: white;
+  padding: 9px 26px;
+  border-radius: 20px;
+}
+
+#intro .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#search .container {
+  margin-top: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+p,
+a,
+input,
+label,
+textarea,
+span,
+ul,
+li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header li {
+  margin: 0 50px;
+}
