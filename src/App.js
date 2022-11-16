@@ -47,6 +47,13 @@ const App = () => {
                         Run
                       </div>
                     </li>
+                    <li>
+                      <div className='col-md-12'>
+                        <h1 style={{ color: '#A0A0A0' }}>
+                          CSE573 Semantic Web Mining Final Project
+                        </h1>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -57,7 +64,6 @@ const App = () => {
           <div className='jumbotron'>
             <div className='container'>
               <div className='col-md-12'>
-                <h1>CSE573 Semantic Web Mining Final Project</h1>
                 <h2>HEALTHCARE MINING - GROUP 3</h2>
                 <h3 style={{ marginTop: '50px' }}>Abstract</h3>
                 <p>

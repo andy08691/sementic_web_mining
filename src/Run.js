@@ -175,15 +175,30 @@ const Run = () => {
       <tr key={index} id={index}>
         <th scope='row'>{index + 1}</th>
         <td>{d.question_title}</td>
-        <td>
-          <a href={d.source}>Go</a>
-        </td>
-
         <td>{new Date(d.postDate * 1000).toISOString().split('T')[0]}</td>
         <td>{d.question_text}</td>
+        <td>
+          <button
+            type='button'
+            class='btn btn-danger btn-sm'
+            onClick={() => {
+              window.open(d.source, '_blank')
+            }}
+          >
+            GO
+          </button>
+        </td>
       </tr>
     ))
   }
+
+  const handleKeypress = (e) => {
+    //it triggers by pressing the enter key
+    if (e.charCode === 13) {
+      getDataFromApi()
+    }
+  }
+
   return (
     <html>
       <head>
@@ -202,7 +217,7 @@ const Run = () => {
                   <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                     <li className='nav-item'>
                       <div
-                        className='nav-link active'
+                        className='nav-link'
                         aria-current='page'
                         onClick={() => {
                           navigate('/')
@@ -213,12 +228,19 @@ const Run = () => {
                     </li>
                     <li className='nav-item'>
                       <div
-                        className='nav-link'
+                        className='nav-link active'
                         onClick={() => {
                           navigate('/run')
                         }}
                       >
                         Run
+                      </div>
+                    </li>
+                    <li>
+                      <div className='col-md-12'>
+                        <h1 style={{ color: '#A0A0A0' }}>
+                          CSE573 Semantic Web Mining Final Project
+                        </h1>
                       </div>
                     </li>
                   </ul>
@@ -238,6 +260,7 @@ const Run = () => {
                 onChange={(event) => {
                   setSearchText(event.target.value)
                 }}
+                onKeyPress={handleKeypress}
               />
               <button
                 class='btn btn-outline-secondary'
@@ -250,19 +273,19 @@ const Run = () => {
                 Search
               </button>
             </div>
-            <table class='table'>
-              <thead>
-                <tr>
-                  <th scope='col'>#</th>
-                  <th scope='col'>Title</th>
-                  <th scope='col'>Url</th>
-                  <th scope='col'>Date</th>
-                  <th scope='col'>Content</th>
-                </tr>
-              </thead>
-              <tbody>{generateTable()}</tbody>
-            </table>
           </div>
+          <table class='table' style={{ width: '90%', marginLeft: '5%' }}>
+            <thead>
+              <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>Title</th>
+                <th scope='col'>Date</th>
+                <th scope='col'>Content</th>
+                <th scope='col'>Link</th>
+              </tr>
+            </thead>
+            <tbody>{generateTable()}</tbody>
+          </table>
         </section>
       </body>
     </html>
