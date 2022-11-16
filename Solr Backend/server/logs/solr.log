@@ -1,0 +1,910 @@
+2022-11-14 23:43:49.175 INFO  (main) [] o.e.j.u.log Logging initialized @1833ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-11-14 23:43:49.482 INFO  (main) [] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 15.0.1+9-18
+2022-11-14 23:43:49.981 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-11-14 23:43:49.995 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.0.0
+2022-11-14 23:43:49.995 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-11-14 23:43:49.996 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /Users/jason/solr-9.0.0
+2022-11-14 23:43:49.996 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-11-14T23:43:49.996270Z
+2022-11-14 23:43:50.008 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /Users/jason/solr-9.0.0/server/solr (source: system property: solr.solr.home)
+2022-11-14 23:43:50.011 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /Users/jason/solr-9.0.0/server/solr/solr.xml
+2022-11-14 23:43:51.172 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2022-11-14 23:43:51.184 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-11-14 23:43:51.409 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /Users/jason/solr-9.0.0/server/solr
+2022-11-14 23:43:51.410 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [healthcare]
+2022-11-14 23:43:51.418 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-11-14 23:43:51.488 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.c.SolrResourceLoader Added 91 libs to classloader, from paths: [/Users/jason/solr-9.0.0/modules/clustering/lib, /Users/jason/solr-9.0.0/modules/extraction/lib, /Users/jason/solr-9.0.0/modules/langid/lib, /Users/jason/solr-9.0.0/modules/ltr/lib, /Users/jason/solr-9.0.0/modules/scripting/lib]
+2022-11-14 23:43:51.516 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@52500920{/solr,file:///Users/jason/solr-9.0.0/server/solr-webapp/webapp/,AVAILABLE}{/Users/jason/solr-9.0.0/server/solr-webapp/webapp}
+2022-11-14 23:43:51.526 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /Users/jason/solr-9.0.0/server/logs/2022_11_14.request.log
+2022-11-14 23:43:51.536 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@5733f295{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2022-11-14 23:43:51.536 INFO  (main) [] o.e.j.s.Server Started @4196ms
+2022-11-14 23:43:51.906 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.0.0
+2022-11-14 23:43:51.917 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2022-11-14 23:43:52.000 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.s.IndexSchema Schema name=example
+2022-11-14 23:43:52.308 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2022-11-14 23:43:52.309 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2022-11-14 23:43:52.309 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2022-11-14 23:43:52.309 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2022-11-14 23:43:52.317 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2022-11-14 23:43:52.326 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.c.CoreContainer Creating SolrCore 'healthcare' using configuration from instancedir /Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs, trusted=true
+2022-11-14 23:43:52.374 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.c.SolrCore Opening new SolrCore at [/Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs], dataDir=[/Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs/data/]
+2022-11-14 23:43:52.878 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-11-14 23:43:52.878 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-11-14 23:43:52.902 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-11-14 23:43:52.903 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-11-14 23:43:53.083 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs/conf
+2022-11-14 23:43:53.084 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=/Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs/conf
+2022-11-14 23:43:53.085 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2022-11-14 23:43:53.085 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=/Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs/conf
+2022-11-14 23:43:53.085 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2022-11-14 23:43:53.085 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2022-11-14 23:43:53.086 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2022-11-14 23:43:53.086 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=/Users/jason/solr-9.0.0/server/solr/configsets/sample_techproducts_configs/conf
+2022-11-14 23:43:53.086 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2022-11-14 23:43:53.087 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2022-11-14 23:43:53.088 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2022-11-14 23:43:53.105 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2022-11-14 23:43:53.112 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2022-11-14 23:43:53.114 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2022-11-14 23:43:53.126 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2022-11-14 23:43:53.140 INFO  (coreLoadExecutor-10-thread-1) [ x:healthcare] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-11-14 23:43:53.222 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=63
+2022-11-14 23:43:53.222 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-11-14 23:43:53.222 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-11-14 23:43:53.222 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2022-11-14 23:43:53.229 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2022-11-14 23:44:28.152 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=7
+2022-11-14 23:44:28.157 INFO  (qtp1090541608-27) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1668469468109} status=0 QTime=6
+2022-11-14 23:44:28.160 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668469468109} status=0 QTime=15
+2022-11-14 23:44:28.165 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=19
+2022-11-14 23:44:28.418 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1668469468109} status=0 QTime=66
+2022-11-14 23:45:01.592 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*} hits=1422 status=0 QTime=3
+2022-11-14 23:49:11.392 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469751119} status=0 QTime=0
+2022-11-14 23:49:11.486 INFO  (qtp1090541608-48) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469751120} status=0 QTime=5
+2022-11-14 23:49:11.493 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469751120} status=0 QTime=4
+2022-11-14 23:49:46.214 ERROR (qtp1090541608-46) [ x:healthcare] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+     => org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:219) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:207) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2866) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:239) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:207) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:202) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:184) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:548) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1434) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:763) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:277) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+Caused by: org.apache.solr.parser.ParseException: Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:959) ~[?:?]
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:827) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:142) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+2022-11-14 23:49:46.214 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid*:*} status=400 QTime=15
+2022-11-14 23:50:17.071 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={} hits=0 status=0 QTime=1
+2022-11-14 23:50:54.798 ERROR (qtp1090541608-43) [ x:healthcare] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+     => org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:219) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:207) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2866) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:239) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:207) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:202) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:184) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:548) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1434) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:763) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'covid*:*': Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:277) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+Caused by: org.apache.solr.parser.ParseException: Encountered " ":" ": "" at line 1, column 6.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:959) ~[?:?]
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:827) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:142) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+2022-11-14 23:50:54.798 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid*:*} status=400 QTime=1
+2022-11-14 23:51:10.652 INFO  (qtp1090541608-48) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:51:10.658 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=4
+2022-11-14 23:51:10.671 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=4
+2022-11-14 23:51:13.266 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:51:13.269 INFO  (qtp1090541608-48) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1668469468109} status=0 QTime=0
+2022-11-14 23:51:13.271 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=4
+2022-11-14 23:51:13.272 INFO  (qtp1090541608-18) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1668469468006&ts=1668469468006} status=503 QTime=1
+2022-11-14 23:51:13.274 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1668469873244} status=0 QTime=4
+2022-11-14 23:51:13.280 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1668469873245} status=0 QTime=10
+2022-11-14 23:51:15.736 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:51:15.745 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=9
+2022-11-14 23:51:20.243 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:51:20.244 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668469875712} hits=0 status=0 QTime=1
+2022-11-14 23:51:20.248 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=5
+2022-11-14 23:51:55.748 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:51:55.754 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=4
+2022-11-14 23:51:55.764 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668469875712} hits=0 status=0 QTime=14
+2022-11-14 23:52:36.786 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:52:36.787 ERROR (qtp1090541608-23) [ x:healthcare] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse '/*/': Encountered "<EOF>" at line 1, column 3.
+Was expecting one of:
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    <TERM> ...
+     => org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse '/*/': Encountered "<EOF>" at line 1, column 3.
+Was expecting one of:
+org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse '/*/': Encountered "<EOF>" at line 1, column 3.
+Was expecting one of:
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    <TERM> ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:219) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:207) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2866) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:239) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:207) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:202) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:184) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:548) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1434) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:763) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse '/*/': Encountered "<EOF>" at line 1, column 3.
+Was expecting one of:
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    <TERM> ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:277) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+Caused by: org.apache.solr.parser.ParseException: Encountered "<EOF>" at line 1, column 3.
+Was expecting one of:
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    <TERM> ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:959) ~[?:?]
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:827) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:177) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:141) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:176) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:168) ~[?:?]
+	... 50 more
+2022-11-14 23:52:36.787 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=/*/&indent=true&q.op=OR&_=1668469875712} status=400 QTime=1
+2022-11-14 23:52:36.792 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=5
+2022-11-14 23:52:44.043 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469468006} status=0 QTime=0
+2022-11-14 23:52:44.051 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469468006} status=0 QTime=7
+2022-11-14 23:52:44.074 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668469875712} hits=0 status=0 QTime=30
+2022-11-14 23:52:46.375 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469966316} status=0 QTime=0
+2022-11-14 23:52:46.379 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469966317} status=0 QTime=4
+2022-11-14 23:52:46.381 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668469966354} hits=0 status=0 QTime=4
+2022-11-14 23:52:47.829 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469966316} status=0 QTime=0
+2022-11-14 23:52:47.832 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668469966354} hits=0 status=0 QTime=2
+2022-11-14 23:52:47.832 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469966317} status=0 QTime=3
+2022-11-14 23:53:09.349 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668469966316} status=0 QTime=0
+2022-11-14 23:53:09.352 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668469966354} hits=0 status=0 QTime=2
+2022-11-14 23:53:09.354 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668469966317} status=0 QTime=5
+2022-11-14 23:53:19.245 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*} hits=1422 status=0 QTime=0
+2022-11-14 23:54:00.543 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={question_text=covid} hits=0 status=0 QTime=0
+2022-11-14 23:55:52.953 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR} hits=0 status=0 QTime=3
+2022-11-14 23:55:54.782 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:54.786 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=5
+2022-11-14 23:55:54.791 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=5
+2022-11-14 23:55:56.146 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:56.149 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:56.150 INFO  (qtp1090541608-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:55:56.558 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:56.561 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:56.562 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:55:56.730 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:56.733 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:56.734 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=4
+2022-11-14 23:55:56.857 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:56.859 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:56.860 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=4
+2022-11-14 23:55:56.980 INFO  (qtp1090541608-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:56.982 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:56.983 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:55:57.333 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:57.335 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:55:57.337 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=4
+2022-11-14 23:55:57.636 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:55:57.639 INFO  (qtp1090541608-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:55:57.639 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=2
+2022-11-14 23:56:00.374 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:56:00.381 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:56:00.385 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=1
+2022-11-14 23:56:00.862 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:56:00.866 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:56:00.867 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*/*&indent=true&q.op=OR&_=1668470154741} hits=0 status=0 QTime=3
+2022-11-14 23:56:10.021 INFO  (qtp1090541608-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:56:10.023 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668470170000} status=0 QTime=2
+2022-11-14 23:56:10.024 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=4
+2022-11-14 23:56:10.800 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:56:10.802 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=3
+2022-11-14 23:56:10.803 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1668470170785} status=0 QTime=3
+2022-11-14 23:56:10.820 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/file params={file=xslt&wt=json&_=1668470170785} status=0 QTime=4
+2022-11-14 23:56:10.826 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/file params={file=lang&wt=json&_=1668470170785} status=0 QTime=10
+2022-11-14 23:56:13.023 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1668470154682&ts=1668470154682} hits=1422 status=0 QTime=1
+2022-11-14 23:56:13.024 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1668470154682&ts=1668470154682} status=0 QTime=1
+2022-11-14 23:56:14.651 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470154682} status=0 QTime=0
+2022-11-14 23:56:14.651 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1668470170000} status=0 QTime=0
+2022-11-14 23:56:14.654 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1668470154682&ts=1668470154682} status=503 QTime=0
+2022-11-14 23:56:14.655 INFO  (qtp1090541608-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470154682} status=0 QTime=4
+2022-11-14 23:56:14.655 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1668470174600} status=0 QTime=3
+2022-11-14 23:56:14.656 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1668470174600} status=0 QTime=4
+2022-11-14 23:56:20.477 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:20.483 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=5
+2022-11-14 23:56:20.489 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:24.848 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:24.848 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1668470184819} status=0 QTime=0
+2022-11-14 23:56:24.849 INFO  (qtp1090541608-24) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1668470180372&ts=1668470180372} status=503 QTime=0
+2022-11-14 23:56:24.851 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1668470184820} status=0 QTime=3
+2022-11-14 23:56:24.852 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:56:24.853 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1668470184820} status=0 QTime=3
+2022-11-14 23:56:27.077 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:27.080 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:28.262 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:28.263 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:56:28.266 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:42.747 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:42.748 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_title%3Dcovid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:56:42.750 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:56:47.369 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:47.370 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:56:47.373 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:56:48.589 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:48.589 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_title%3Dcovid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=0
+2022-11-14 23:56:48.592 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:48.907 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:48.908 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:56:48.911 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:56:50.632 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:50.636 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:56:50.637 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:50.910 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:50.910 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:56:50.913 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:56:51.003 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:56:51.004 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:56:51.006 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:57:38.428 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:57:38.429 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=2
+2022-11-14 23:57:38.432 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:57:59.485 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:57:59.487 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dfever&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:57:59.489 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:57:59.871 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:57:59.873 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dfever&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:57:59.874 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:58:07.914 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:58:07.915 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:58:07.918 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:58:08.357 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:58:08.358 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:58:08.361 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-14 23:58:28.189 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:58:28.190 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dpositive&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-14 23:58:28.193 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-14 23:58:29.434 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-14 23:58:29.434 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-14 23:58:29.437 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:00:15.411 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:00:15.413 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=2
+2022-11-15 00:00:15.414 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:00:17.073 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:00:17.073 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1668470187037} hits=1422 status=0 QTime=0
+2022-11-15 00:00:17.076 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:01:00.156 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:00.157 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:00.160 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-15 00:01:06.366 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:06.366 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=OR&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:06.369 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:01:11.459 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:11.460 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:11.463 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-15 00:01:11.871 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:11.871 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:11.873 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=2
+2022-11-15 00:01:11.992 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:11.993 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:11.996 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-15 00:01:16.288 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:16.290 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:16.293 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=4
+2022-11-15 00:01:16.420 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:16.422 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:16.424 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:01:20.564 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470180371} status=0 QTime=0
+2022-11-15 00:01:20.564 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text%3Dcovid&indent=true&q.op=AND&_=1668470187037} hits=0 status=0 QTime=1
+2022-11-15 00:01:20.567 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470180372} status=0 QTime=3
+2022-11-15 00:01:53.005 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470512938} status=0 QTime=0
+2022-11-15 00:01:53.009 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470512938} status=0 QTime=4
+2022-11-15 00:01:53.022 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:death&indent=true&q.op=OR&_=1668470512984} hits=28 status=0 QTime=15
+2022-11-15 00:02:04.967 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470512938} status=0 QTime=0
+2022-11-15 00:02:04.972 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470512938} status=0 QTime=4
+2022-11-15 00:02:04.972 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR&_=1668470512984} hits=761 status=0 QTime=5
+2022-11-15 00:02:14.172 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR} hits=761 status=0 QTime=1
+2022-11-15 00:02:16.899 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470536820} status=0 QTime=0
+2022-11-15 00:02:16.899 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR&_=1668470536874} hits=761 status=0 QTime=0
+2022-11-15 00:02:16.902 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470536820} status=0 QTime=3
+2022-11-15 00:02:31.570 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:31.571 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR&_=1668470551549} hits=761 status=0 QTime=1
+2022-11-15 00:02:31.573 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:02:35.686 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:35.686 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470551549} hits=0 status=0 QTime=1
+2022-11-15 00:02:35.689 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:02:36.352 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:36.354 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470551549} hits=0 status=0 QTime=1
+2022-11-15 00:02:36.356 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=4
+2022-11-15 00:02:36.494 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:36.495 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470551549} hits=0 status=0 QTime=0
+2022-11-15 00:02:36.497 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:02:36.596 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:36.596 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&indent=true&q.op=OR&_=1668470551549} hits=0 status=0 QTime=0
+2022-11-15 00:02:36.599 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:02:37.540 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:37.541 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR&_=1668470551549} hits=761 status=0 QTime=1
+2022-11-15 00:02:37.543 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:02:38.778 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:02:38.780 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid&indent=true&q.op=OR&_=1668470551549} hits=761 status=0 QTime=1
+2022-11-15 00:02:38.781 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:03:57.424 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:03:57.427 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:03:57.434 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR&_=1668470551549} hits=943 status=0 QTime=10
+2022-11-15 00:04:02.254 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:04:02.257 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:04:02.277 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=AND&_=1668470551549} hits=498 status=0 QTime=21
+2022-11-15 00:04:03.220 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:04:03.221 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=AND&_=1668470551549} hits=498 status=0 QTime=1
+2022-11-15 00:04:03.223 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=2
+2022-11-15 00:04:05.988 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:04:05.990 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR&_=1668470551549} hits=943 status=0 QTime=1
+2022-11-15 00:04:05.992 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:04:08.894 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:04:08.895 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=AND&_=1668470551549} hits=498 status=0 QTime=1
+2022-11-15 00:04:08.897 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:04:15.523 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470551509} status=0 QTime=0
+2022-11-15 00:04:15.524 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR&_=1668470551549} hits=943 status=0 QTime=1
+2022-11-15 00:04:15.527 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470551509} status=0 QTime=3
+2022-11-15 00:04:17.319 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=0
+2022-11-15 00:04:19.070 INFO  (qtp1090541608-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470658976} status=0 QTime=0
+2022-11-15 00:04:19.071 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR&_=1668470659045} hits=943 status=0 QTime=1
+2022-11-15 00:04:19.073 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470658976} status=0 QTime=3
+2022-11-15 00:04:20.445 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=1
+2022-11-15 00:04:30.598 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668470670507} status=0 QTime=1
+2022-11-15 00:04:30.600 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR&_=1668470670561} hits=943 status=0 QTime=1
+2022-11-15 00:04:30.602 INFO  (qtp1090541608-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668470670508} status=0 QTime=4
+2022-11-15 00:05:40.963 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=1
+2022-11-15 05:18:34.017 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=110
+2022-11-15 05:18:42.369 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=0
+2022-11-15 05:20:18.502 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=1
+2022-11-15 05:20:42.697 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=4
+2022-11-15 05:24:13.529 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=15
+2022-11-15 05:24:34.759 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=5
+2022-11-15 05:24:43.069 INFO  (qtp1090541608-47) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:What+is+covid?+question_title:What+is+covid?&indent=true&q.op=OR} hits=353 status=0 QTime=34
+2022-11-15 05:35:23.638 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:vaccine+question_title:vaccine&indent=true&q.op=OR} hits=191 status=0 QTime=3
+2022-11-15 05:35:33.574 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:Covid+question_title:Covid&indent=true&q.op=OR} hits=943 status=0 QTime=1
+2022-11-15 05:35:38.622 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:Smell+question_title:Smell&indent=true&q.op=OR} hits=103 status=0 QTime=2
+2022-11-15 05:35:46.695 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:Lost+Smell+question_title:Lost+Smell&indent=true&q.op=OR} hits=60 status=0 QTime=3
+2022-11-15 05:37:03.839 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=1
+2022-11-15 05:39:39.202 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:What+is+covid+question_title:What+is+covid&indent=true&q.op=OR} hits=353 status=0 QTime=5
+2022-11-15 05:39:49.497 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:What+is+covid?+question_title:What+is+covid?&indent=true&q.op=OR} hits=353 status=0 QTime=5
+2022-11-15 05:39:50.470 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:What+is+covid?+question_title:What+is+covid?&indent=true&q.op=OR} hits=353 status=0 QTime=2
+2022-11-15 18:16:12.785 INFO  (qtp1090541608-25) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&indent=true&q.op=OR} hits=943 status=0 QTime=66
+2022-11-15 18:27:07.875 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&q.op=OR} hits=943 status=0 QTime=2
+2022-11-15 18:30:47.598 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=video&defType=dismax} hits=0 status=0 QTime=47
+2022-11-15 18:30:52.260 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax} hits=0 status=0 QTime=1
+2022-11-15 18:31:20.466 ERROR (qtp1090541608-45) [ x:healthcare] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: invalid query parser 'dismax?' for query 'question_text:covid question_title:covid' => org.apache.solr.common.SolrException: invalid query parser 'dismax?' for query 'question_text:covid question_title:covid'
+	at org.apache.solr.search.QParser.getParser(QParser.java:380)
+org.apache.solr.common.SolrException: invalid query parser 'dismax?' for query 'question_text:covid question_title:covid'
+	at org.apache.solr.search.QParser.getParser(QParser.java:380) ~[?:?]
+	at org.apache.solr.search.QParser.getParser(QParser.java:322) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:167) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:207) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2866) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:239) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:207) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:202) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:184) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:548) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1434) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:763) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.44.v20210927.jar:9.4.44.v20210927]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+2022-11-15 18:31:20.469 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=question_text:covid+question_title:covid&defType=dismax?&q.op=OR} status=400 QTime=7
+2022-11-15 18:31:58.332 INFO  (qtp1090541608-20) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_text} hits=761 status=0 QTime=8
+2022-11-15 18:44:50.270 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=943 status=0 QTime=35
+2022-11-15 18:49:29.326 INFO  (qtp1090541608-51) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=3
+2022-11-15 18:49:29.345 INFO  (qtp1090541608-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=22
+2022-11-15 18:49:29.352 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=4
+2022-11-15 18:49:32.087 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=0
+2022-11-15 18:49:32.092 INFO  (qtp1090541608-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=4
+2022-11-15 18:49:32.094 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1668538172073} status=0 QTime=4
+2022-11-15 18:49:32.095 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1668538169179&ts=1668538169179} status=503 QTime=2
+2022-11-15 18:49:32.103 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1668538172073} status=0 QTime=13
+2022-11-15 18:49:32.104 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1668538172073} status=0 QTime=14
+2022-11-15 18:49:37.526 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=0
+2022-11-15 18:49:37.529 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=4
+2022-11-15 18:49:37.530 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1668538177509} status=0 QTime=2
+2022-11-15 18:49:37.531 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668538172073} status=0 QTime=5
+2022-11-15 18:49:37.587 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1668538172073} status=0 QTime=6
+2022-11-15 18:49:41.830 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=0
+2022-11-15 18:49:41.831 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1668538177509} status=0 QTime=0
+2022-11-15 18:49:41.833 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668538172073} status=0 QTime=2
+2022-11-15 18:49:41.839 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=6
+2022-11-15 18:49:41.881 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1668538172073} status=0 QTime=2
+2022-11-15 18:49:53.356 INFO  (qtp1090541608-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=0
+2022-11-15 18:49:53.356 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1668538177509} status=0 QTime=0
+2022-11-15 18:49:53.359 INFO  (qtp1090541608-42) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668538172073} status=0 QTime=4
+2022-11-15 18:49:53.361 INFO  (qtp1090541608-46) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=5
+2022-11-15 18:49:53.381 INFO  (qtp1090541608-45) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1668538172073} status=0 QTime=1
+2022-11-15 18:50:20.912 INFO  (qtp1090541608-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668538169179} status=0 QTime=0
+2022-11-15 18:50:20.914 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1668538177509} status=0 QTime=1
+2022-11-15 18:50:20.914 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1668538172073} status=0 QTime=2
+2022-11-15 18:50:20.916 INFO  (qtp1090541608-45) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668538169179} status=0 QTime=3
+2022-11-15 18:50:20.968 INFO  (qtp1090541608-49) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1668538172073} status=0 QTime=8
+2022-11-15 19:23:53.205 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=943 status=0 QTime=8
+2022-11-15 19:25:46.839 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=943 status=0 QTime=1
+2022-11-15 19:25:58.223 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Vaccine?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=191 status=0 QTime=6
+2022-11-15 19:26:09.080 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Moderna&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=39 status=0 QTime=4
+2022-11-15 23:48:45.422 INFO  (qtp1090541608-55) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+covid+symptoms?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1229 status=0 QTime=390
+2022-11-15 23:50:53.966 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+covid+symptoms?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1229 status=0 QTime=15
+2022-11-15 23:54:50.036 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-11-15 23:54:50.165 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.SolrCore Registered new searcher autowarm time: 21 ms
+2022-11-15 23:54:50.244 INFO  (qtp1090541608-60) [ x:healthcare] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={stream.body=<delete><query>*:*</query></delete>&commit=true}{deleteByQuery=*:* (-1749608289523466240), commit=} 0 1700
+2022-11-15 23:55:10.234 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=0 status=0 QTime=17
+2022-11-15 23:55:30.092 INFO  (qtp1090541608-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1668556529843} status=0 QTime=13
+2022-11-15 23:55:30.193 INFO  (qtp1090541608-56) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668556529844} status=0 QTime=114
+2022-11-15 23:55:30.215 INFO  (qtp1090541608-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1668556529844} status=0 QTime=18
+2022-11-15 23:56:13.488 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-11-15 23:56:13.507 INFO  (searcherExecutor-12-thread-1-processing-healthcare) [ x:healthcare] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2022-11-15 23:56:13.509 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commit=true}{add=[0 (1749608373240725504), 1 (1749608373688467456), 2 (1749608373690564608), 3 (1749608373695807488), 4 (1749608373700001792), 5 (1749608373703147520), 6 (1749608373707341824), 7 (1749608373709438976), 8 (1749608373710487552), 9 (1749608373713633280), ... (1422 adds)], commit=} 0 4296
+2022-11-15 23:56:20.200 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=943 status=0 QTime=8
+2022-11-15 23:57:18.771 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=943 status=0 QTime=4
+2022-11-15 23:59:30.438 INFO  (qtp1090541608-62) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid_symptom&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=0 status=0 QTime=8
+2022-11-15 23:59:41.558 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=covid+symptom&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=955 status=0 QTime=17
+2022-11-15 23:59:54.105 INFO  (qtp1090541608-62) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=what+is+covid+symptom&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1230 status=0 QTime=20
+2022-11-16 00:04:11.044 INFO  (qtp1090541608-43) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+covid+symptoms?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1229 status=0 QTime=25
+2022-11-16 00:11:27.300 INFO  (qtp1090541608-59) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=How+to+prevent+covid?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1330 status=0 QTime=57
+2022-11-16 00:46:11.393 INFO  (qtp1090541608-46) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+is+a+covid+vaccine?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1354 status=0 QTime=27
+2022-11-16 00:49:10.773 INFO  (qtp1090541608-62) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Is+the+vaccine+safe?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1240 status=0 QTime=7
+2022-11-16 00:54:01.261 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+is+a+covid+booster?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1348 status=0 QTime=6
+2022-11-16 01:01:10.499 INFO  (qtp1090541608-59) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Can+I+take+ivermectin?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1130 status=0 QTime=5
+2022-11-16 01:01:22.372 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=ivermectin&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=5 status=0 QTime=1
+2022-11-16 01:01:49.259 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Can+my+pet+get+covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1251 status=0 QTime=5
+2022-11-16 01:01:58.108 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Can+my+dog+get+covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1252 status=0 QTime=7
+2022-11-16 01:01:58.776 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Can+my+dog+get+covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1252 status=0 QTime=1
+2022-11-16 01:01:59.233 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Can+my+dog+get+covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1252 status=0 QTime=3
+2022-11-16 01:02:13.563 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+the+covid+variants?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1346 status=0 QTime=4
+2022-11-16 01:02:29.338 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+the+covid+variants?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1346 status=0 QTime=1
+2022-11-16 01:02:29.747 INFO  (qtp1090541608-56) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+the+covid+variants?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1346 status=0 QTime=4
+2022-11-16 01:02:43.918 INFO  (qtp1090541608-51) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Covid+variant&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=951 status=0 QTime=2
+2022-11-16 01:06:22.206 INFO  (qtp1090541608-55) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Covid+prevention&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=946 status=0 QTime=4
+2022-11-16 01:06:34.454 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=How+to+prevent+covid&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1330 status=0 QTime=1
+2022-11-16 01:06:42.939 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=How+to+prevent+covid?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1330 status=0 QTime=2
+2022-11-16 01:06:43.417 INFO  (qtp1090541608-53) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=How+to+prevent+covid?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1330 status=0 QTime=1
+2022-11-16 01:17:21.936 INFO  (qtp1090541608-59) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=How+to+fight+covid?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1330 status=0 QTime=4
+2022-11-16 01:17:34.475 INFO  (qtp1090541608-62) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+are+covid+symptoms?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1229 status=0 QTime=1
+2022-11-16 01:17:43.424 INFO  (qtp1090541608-23) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=What+is+covid?&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=1228 status=0 QTime=2
+2022-11-16 01:17:54.258 INFO  (qtp1090541608-62) [ x:healthcare] o.a.s.c.S.Request webapp=/solr path=/select params={q=Covid+Variant&defType=dismax&qf=question_title^2.5+question_text^0.5} hits=951 status=0 QTime=1
