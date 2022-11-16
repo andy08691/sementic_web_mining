@@ -139,30 +139,25 @@ const Run = () => {
 
   const getDataFromApi = async () => {
     // get data from server
-    // let url =
-    //   PREFIX_URL +
-    //   'select?indent=true&q.op=OR&q=question_text%3A' +
-    //   searchText +
-    //   '%20question_title%3A' +
-    //   searchText
-    // console.log('getDataFromApi', url)
-    // const response = await fetch(url, {
-    //   Method: 'GET',
-    //   Headers: {
-    //     Accept: 'application.json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   Cache: 'default',
-    // })
-    // if (response) {
-    //   const result = await response.json()
-    //   if (result['response']['docs'].length >= 0) {
-    //     setData(result['response']['docs'])
-    //   }
-    // }
+    let url = PREFIX_URL + 'select?defType=dismax&q=' + searchText + '&qf=question_title^2.5+question_text^0.5';
+    console.log('getDataFromApi', url)
+    const response = await fetch(url, {
+      Method: 'GET',
+      Headers: {
+        Accept: 'application.json',
+        'Content-Type': 'application/json',
+      },
+      Cache: 'default',
+    })
+    if (response) {
+      const result = await response.json()
+      if (result['response']['docs'].length >= 0) {
+        setData(result['response']['docs'])
+      }
+    }
 
     // for fake data
-    setData(FAKE.response.docs)
+    //setData(FAKE.response.docs)
   }
   const generateTable = () => {
     if (data.length <= 0) {
